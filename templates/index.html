@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block title %}
+    Portefolio
+{% endblock %}
+
+{% block main %}
+    {% if not symbol%}
+        <form action="/quote" method="post">
+            <div class="mb-3">
+                <label>Stock abbrivation</label>
+                <input name="symbol" type="text" autocomplete="off" class="form-control mx-auto w-auto"  placeholder="Symbol">
+            </div>
+            <button class="btn btn-primary" type="submit">Quote Stock</button>
+        </form>
+    {% else %}
+        <p>The price for <b>{{ symbol['symbol'] }}</b> is <b>{{ symbol['price'] | usd }}</b></p>
+    {% endif %}
+    {% if stocks %}
+        <table>
+            <tbody>
+                <tr>
+                    <th> Stock Abbrivation</th>
+                    <th> Quanity </th>
+                    <th> Price </th>
+                    <th> Total </th>
+                </tr>
+                {% for stock in stocks %}
+                    <tr>
+                        <td> {{ stock['abbrivation'] }}</td>
+                        <td> {{ stock['qty'] }}</td>
+                        <td> {{ stock['price'] | usd }}</td>
+                        <td> {{ stock['total'] | usd }}</td>
+                    </tr>
+                {% endfor %}
+
+                <tr>
+                    <td class='text-end' colspan="3"><b>Cash</b></td>
+                    {% for ui in userinfo %}
+                    <td> {{ ui['cash'] | usd}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td class='text-end' colspan="3"><b>Total</b></td>
+                    {% for ui in userinfo %}
+                        <td> {{ ui['total'] | usd}}</td>
+                    {% endfor %}
+                 </tr>
+            </tbody>
+        </table>
+    {% else %}
+
+        <h3> No Records to show</h3>
+    {% endif %}
+    {% if history %}
+        <h2> Trading History </h2>
+        <table>
+            <th> Status </th>
+            <th> Quanity </th>
+            <th> Stock abbrivation </th>
+            <th> price </th>
+            <th> Date </th>
+            {% for stock in history %}
+                <tr>
+                    {% if stock['status'] == 'BOUGHT' %}
+                        <td class='green'>{{ stock['status'] }}</td>
+                    {% else %}
+                        <td class='red'>{{ stock['status'] }}</td>
+                    {% endif %}
+                    <td>{{ stock['qty'] }}</td>
+                    <td>{{ stock['abbrivation'] }}</td>
+                    <td>{{ stock['price'] | usd}}</td>
+                    <td>{{ stock['time_stamp'] }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    {% else %}
+        <h3> No Recorded History to show </h3>
+    {% endif %}
+    <div>
+        A default Graph of current stock
+    </div>
+{% endblock %}

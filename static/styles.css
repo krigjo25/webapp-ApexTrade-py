@@ -1,0 +1,101 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+h3 {
+    display: inline-block;
+}
+.success {
+    color: white;
+    padding-block: 2em;
+    padding-inline: 1em;
+}
+.alrt {
+    background-color: red;
+}
+.pfolio_value {
+
+
+}
+/* grid */
+.grid-container {
+    color: white;
+    row-gap: 1em;
+    display: grid;
+    column-gap: 1em;
+    background-color: green;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    padding-block: 2em;
+    padding-inline: 1em;
+    display: inline-grid;
+}
+
+table {
+    margin: auto;
+    margin-block-end: 2em;
+}
+th {
+    padding: 1em;
+    inline-size: 20em;
+    border-bottom: 1px solid black;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-inline: 1em;
+    padding-block: 0.8em;
+    background-color: inherit;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+
+  /* Style the tab content */
+  .tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }

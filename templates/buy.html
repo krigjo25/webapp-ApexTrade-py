@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}
+    Portefolio
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="mb-3">
+            <label>Stock abbrivation</label>
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="symbol" placeholder="Stock Abbrivation" type="text">
+            <label>Quanity</label>
+            <input class="form-control mx-auto w-auto" name="shares" placeholder="Quanity" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy Stock</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log out
+{% endblock %}
+
+{% block main %}
+    <h1>Logged Out</h1>
+    <p> Redirects in few moments, otherwise <a href="{{ url_for('login.html', type ='logout') }}"> Click me </a>
+{% endblock %}
