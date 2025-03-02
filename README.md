@@ -1,31 +1,38 @@
-# Finance
+# ApexTrade
+The assignment were to create a replica of a finance webpage.
 
-## About this project
+The application was implemented as an assignment at xCS50
+Please respect, and keep the [Academic Honesty Policy](https://cs50.harvard.edu/x/2023/honesty/) in mind.<br>
+A demo of the application can be watched at [CS50 Demo](https://cs50.harvard.edu/x/2024/psets/9/finance/)
 
-Implements a CS program to simulate a voting as Pularity
+## Installation
+1. Clone the repository:
+```sh
+#   Using HTTPS
+git clone https://github.com/krigjo25/webapp-ApexTrade-py.git
 
-In this assignment the implemetation details stated we had to change the color of the pixels.
-So the document helpers.c is the only code document which was created.
+#   Using SSH
+ssh git@github.com:krigjo25/webapp-ApexTrade-py.git
 
-Base program was created by xCS50
+#   Using Github CLI
+gh repo clone krigjo25/webapp-ApexTrade-py
+```
 
-Originally this project was created as an
-assignment at xCS50 - Introduction to Computer Science.
+2. Navigate to the project directory
+```sh
+cd webapp-ApexTrade-py
+```
 
-##  Credits
+3. Install given requirements
+```sh
+pip install -r requirements.txt
+```
 
-[flask - by the pallets project]()
-[flask_session - by the pallets project]()
-[pytest -]()
-[SQL ALchomy - ]()
-[CS50 - CS50Team]()
-[helpers - CS50Team]()
+4. Run the file
+```sh
+flask run --debug ( opens up the development environment)
+```
 
-###  Disclamers
-
-This code snippet may be used to debug
-A student's code, but don't copy it,
-Please be aware, and respect the [academic honesty policy](https://cs50.harvard.edu/x/2023/honesty/).
 
 Sincerely,
 @krigjo25
